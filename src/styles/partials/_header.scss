@@ -1,0 +1,65 @@
+
+
+.header {
+    
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    &__svg {
+        fill: black;
+        max-height: 25px;
+        max-width: 120px;
+        
+    }
+
+    &__user-img {
+        height: 41px;
+        width: 41px;
+        border-radius: 100px;
+        margin-left: 20px;
+    }
+
+    &__search-bar {
+        height: 35px;
+        flex-grow: 3;
+        position: relative;
+
+        &::placeholder {
+            text-indent: 30px;
+        }
+    }
+
+    &__searchSvg {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    &__search-wrap {
+        width: 90%;
+        display: flex;
+        margin-top: 20px;
+    }
+
+    &__upload-btn {
+        height: 40px;
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    &__upload-wrap {
+        width: 90%;
+    }
+
+    &__logo-wrap {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+}

@@ -1,1 +1,57 @@
-/*# sourceMappingURL=app.css.map */
+.header__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.header__svg {
+  fill: black;
+  max-height: 25px;
+  max-width: 120px;
+}
+.header__user-img {
+  height: 41px;
+  width: 41px;
+  border-radius: 100px;
+  margin-left: 20px;
+}
+.header__search-bar {
+  height: 35px;
+  flex-grow: 3;
+  position: relative;
+}
+.header__search-bar::-moz-placeholder {
+  text-indent: 30px;
+}
+.header__search-bar::placeholder {
+  text-indent: 30px;
+}
+.header__searchSvg {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.header__search-wrap {
+  width: 90%;
+  display: flex;
+  margin-top: 20px;
+}
+.header__upload-btn {
+  height: 40px;
+  width: 100%;
+  margin: 20px 0;
+}
+.header__upload-wrap {
+  width: 90%;
+}
+.header__logo-wrap {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.App {
+  background-color: white;
+  height: 100vh;
+}/*# sourceMappingURL=App.css.map */
