@@ -1,4 +1,4 @@
-
+@use "../partials/variables" as *;
 
 .header {
     
@@ -7,6 +7,9 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        row-gap: 20px;
+        max-width: 1600px;
+        margin: 0 auto;
     }
 
 
@@ -27,39 +30,112 @@
     &__search-bar {
         height: 35px;
         flex-grow: 3;
-        position: relative;
+        padding-left: 30px;
+        max-width: 450px;
+        display: flex;
+        background-color: $form-field;
+        border: $divider-line 2px solid;
+        border-radius: 5px;
+        padding: 7px 0 7px 35px;
+        
+        
 
-        &::placeholder {
-            text-indent: 30px;
-        }
+        
+    }
+
+    &__anchor {
+        position: relative;
+        display: flex;
+        flex-grow: 3;
     }
 
     &__searchSvg {
         position: absolute;
-        left: 0;
-        top: 0;
+        left: 15px;
+        top: 18px;
     }
 
     &__search-wrap {
         width: 90%;
+        max-width: 490px;
         display: flex;
-        margin-top: 20px;
+        justify-content: center;
+        
     }
 
     &__upload-btn {
         height: 40px;
         width: 100%;
         margin: 20px 0;
+        background-color: $primary-cta;
+        color: $background-color;
+        border-radius: 5px;
+        border: transparent;
+        max-width: 490px;
+        height: 53px;
+        padding: 0;
+        
+    }
+
+    &__uploadSvg {
+        fill: black;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        & svg {
+            fill: black;
+        }
     }
 
     &__upload-wrap {
         width: 90%;
+        position: relative;
+        display: flex;
+        justify-content: center;
     }
 
     &__logo-wrap {
         width: 90%;
         display: flex;
         justify-content: center;
-        margin-top: 20px;
+        
+    }
+}
+
+
+
+
+@media (min-width: 768px) {
+    .header {
+        &__container {
+            flex-direction: row;
+            
+        }
+
+        &__logo-wrap {
+            justify-self: flex-start;
+            // justify-content: start;
+        }
+
+        &__search-wrap {
+            max-width: 350px;
+            justify-content: flex-end;
+            
+        }
+
+        &__upload {
+            &-btn {
+                max-width: 150px;
+            }
+
+            // &-wrap {
+                
+            // }
+            
+        }
+
+        &__user-img {
+            display: none;
+        }
     }
 }

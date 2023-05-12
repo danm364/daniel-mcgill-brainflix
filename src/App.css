@@ -3,6 +3,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  row-gap: 20px;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 .header__svg {
   fill: black;
@@ -18,39 +21,81 @@
 .header__search-bar {
   height: 35px;
   flex-grow: 3;
+  padding-left: 30px;
+  max-width: 450px;
+  display: flex;
+  background-color: #FAFAFA;
+  border: #E1E1E1 2px solid;
+  border-radius: 5px;
+  padding: 7px 0 7px 35px;
+}
+.header__anchor {
   position: relative;
-}
-.header__search-bar::-moz-placeholder {
-  text-indent: 30px;
-}
-.header__search-bar::placeholder {
-  text-indent: 30px;
+  display: flex;
+  flex-grow: 3;
 }
 .header__searchSvg {
   position: absolute;
-  left: 0;
-  top: 0;
+  left: 15px;
+  top: 18px;
 }
 .header__search-wrap {
   width: 90%;
+  max-width: 490px;
   display: flex;
-  margin-top: 20px;
+  justify-content: center;
 }
 .header__upload-btn {
   height: 40px;
   width: 100%;
   margin: 20px 0;
+  background-color: #0095FF;
+  color: #FFFFFF;
+  border-radius: 5px;
+  border: transparent;
+  max-width: 490px;
+  height: 53px;
+  padding: 0;
+}
+.header__uploadSvg {
+  fill: black;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+.header__uploadSvg svg {
+  fill: black;
 }
 .header__upload-wrap {
   width: 90%;
+  position: relative;
+  display: flex;
+  justify-content: center;
 }
 .header__logo-wrap {
   width: 90%;
   display: flex;
   justify-content: center;
-  margin-top: 20px;
 }
 
+@media (min-width: 768px) {
+  .header__container {
+    flex-direction: row;
+  }
+  .header__logo-wrap {
+    justify-self: flex-start;
+  }
+  .header__search-wrap {
+    max-width: 350px;
+    justify-content: flex-end;
+  }
+  .header__upload-btn {
+    max-width: 150px;
+  }
+  .header__user-img {
+    display: none;
+  }
+}
 .App {
   background-color: white;
   height: 100vh;
