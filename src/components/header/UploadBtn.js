@@ -1,5 +1,5 @@
 
-import uploadSvg from '../assets/images/icons/upload.svg'
+import uploadSvg from '../../assets/images/icons/upload.svg'
 
 
 function UploadBtn() {

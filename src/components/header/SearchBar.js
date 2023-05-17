@@ -1,5 +1,5 @@
-import userImg from '../assets/images/Mohan-muruge.jpg'
-import searchSvg from '../assets/images/icons/search.svg'
+import userImg from '../../assets/images/Mohan-muruge.jpg'
+import searchSvg from '../../assets/images/icons/search.svg'
 
 
 function SearchBar() {

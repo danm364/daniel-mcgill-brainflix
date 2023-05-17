@@ -53,6 +53,7 @@
         position: absolute;
         left: 15px;
         top: 18px;
+        
     }
 
     &__search-wrap {
@@ -66,31 +67,34 @@
     &__upload-btn {
         height: 40px;
         width: 100%;
-        margin: 20px 0;
+        
         background-color: $primary-cta;
         color: $background-color;
         border-radius: 5px;
         border: transparent;
         max-width: 490px;
-        height: 53px;
+        justify-content: center;
+        align-items: center;
         padding: 0;
+        display: flex;
+
         
     }
 
     &__uploadSvg {
         fill: black;
         position: absolute;
-        top: 0;
-        bottom: 0;
-        & svg {
-            fill: black;
-        }
+        top: 6px;
+        left: 5px;
+        
+        background-color: $primary-cta;
+        
     }
 
     &__upload-wrap {
         width: 90%;
         position: relative;
-        display: flex;
+        
         justify-content: center;
     }
 

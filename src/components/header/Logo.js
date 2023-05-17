@@ -1,4 +1,4 @@
-import svgLogo from '../assets/images/BrainFlix-logo.svg';
+import svgLogo from '../../assets/images/BrainFlix-logo.svg';
 
 
 
