@@ -1,0 +1,35 @@
+
+.body {
+    &__container {
+        display: flex;
+        justify-content: center;
+        
+    }
+}
+.video {
+
+    &__carousel {
+        display: block;
+        width: 500px;
+    }
+
+    &__container {
+        margin: auto 0;
+        width: 100%;
+        background-color: black;
+        
+    }
+}
+
+
+@media (min-width:768px) {
+    .video {
+
+        &__container {
+            margin: auto 0;
+            height: 75vh;
+            background-color: black;
+            
+        }
+    }
+}

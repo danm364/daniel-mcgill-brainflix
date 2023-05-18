@@ -9,8 +9,10 @@ function Header() {
     return (
       <header className="header__container">
         <Logo />
-        <SearchBar />
-        <UploadBtn />
+        <div className="header__flex-wrap">
+          <SearchBar />
+          <UploadBtn />
+        </div>
       </header>
     );
   }
