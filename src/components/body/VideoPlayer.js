@@ -1,16 +1,32 @@
 import videos from "../../data/videos.json";
+import { useState } from "react";
+import playBtn from "../../assets/images/icons/play.svg";
 
+import PlayBtn from "./PlayBtn";
+import VideoTimeBar from "./VideoTimeBar";
+import Options from "./Options";
 
 function VideoPlayer() {
 
-    console.log(videos[0].image)
-
+    
     let bmxVideo = videos[0].image
+
+    const [videosData, setVideo] = useState({bmxVideo})
+
+    
     return (
-      <video className="video__container">
+      <div className="video__wrap">
+        <video className="video__container" poster={bmxVideo}>
+        </video>
+        <div className="video__controls">
+          <PlayBtn />
+          <VideoTimeBar />
+          < Options />
+        </div>
         
-        <source src={bmxVideo} type="video/jpg" alt="video-image" className="video__carousel"/>
-      </video>
+      </div>
+        
+      
     );
   }
   
