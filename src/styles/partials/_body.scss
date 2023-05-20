@@ -14,11 +14,11 @@
     
 }
 
-.body {
+.hero {
     &__container {
         display: flex;
         justify-content: center;
-        background-color: black;
+        background-color: black;    
     }
 }
 .video {
@@ -31,16 +31,24 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding-left: 3%;
 
         }
         &-line {
-            width: 80%;
+            width: 85%;
+            
+            border-top: clamp(1px, 0.9vw, 7px) solid black;
+            justify-self: center;
+            display: flex;
         }
 
         &-digits {
+            display: flex;
             margin-right: 2%;
             font-size: 0.9vw;
             color: white;
+            width: 10%;
+            
         }
     }
 
@@ -114,6 +122,16 @@
             max-width: 1268px;
             background-color: black;
             
+        }
+
+        
+    }
+}
+
+@media (min-width: 1250px) {
+    .video {
+        &__timer-digits {
+            font-size: 17px;
         }
     }
 }

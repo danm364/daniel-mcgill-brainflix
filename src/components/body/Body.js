@@ -1,14 +1,15 @@
 import VideoPlayer from "./VideoPlayer";
+import Content from "./content/Content";
 
-import btn from "../../assets/images/icons/fullscreen.svg"
 
 function Body() {
     return (
-      <body className="body__container">
-        <VideoPlayer />
-        
-      </body>
-
+      <div>
+        <section className="hero__container">
+          <VideoPlayer />
+        </section>
+        <Content />
+      </div>
     );
   }
   
