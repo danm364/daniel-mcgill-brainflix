@@ -1,6 +1,7 @@
 @use "./styles/partials/header" as *;
 @use "./styles/partials/body" as *;
 @use "./styles/partials/content" as *;
+@use "./styles/partials/commentFeed" as *;
 .App {
     
     background-color: white;

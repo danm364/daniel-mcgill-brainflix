@@ -1,0 +1,128 @@
+@use "../partials/variables" as *;
+.--smartphone-none {
+    display: none;
+}
+.comment {
+
+    &__svg {
+        position: absolute;
+        top: 7px;
+        left: 10px;
+    }
+
+    &__btn {
+        height: 40px;
+        width: 100%;
+        background-color: $primary-cta;
+        color: $form-field;
+        border: transparent;
+        border-radius: 5px;
+    }
+
+    &__input-area {
+        height: 100px;
+        width: 100%;
+        border: 1px solid $divider-line;
+        background-color: $form-field;
+        border-radius: 5px;
+        padding: 10px 0 0 10px;
+        font-size: 1rem;
+        &::placeholder {
+            color: black;
+        } 
+    }
+
+    &__user-img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50px;
+        position: absolute;
+        top: 0;
+        left: -60px;
+    }
+
+    &__anchor {
+        
+        &-left {
+            position: relative;
+            width: 100%;
+            display: flex;
+        }
+
+        &-right {
+            position: relative;
+            width: 100%;
+            display: flex;
+
+        }
+    }
+
+    &__container {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__form {
+        &-container {
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            align-self: flex-end;
+            row-gap: 10px;
+        }
+
+        &-header {
+            color: $secondary-text;
+        }
+    }
+    
+
+}
+
+@media (min-width: 768px) {
+
+    .--smartphone-none {
+        display: block;
+    }
+    .--none {
+        display: none;
+    }
+    .comment {
+
+        &__form-container {
+            width: 100%;
+            flex-direction: row;
+            column-gap: 20px;
+            
+            
+        }
+
+        &__input-area {
+            height: 28px;
+            
+        }
+        &__user-img {
+            position: static;
+        }
+
+        &__anchor {
+            &-left {
+                width: 100%;
+                column-gap: 20px;
+            }
+            &-right {
+                width: 60%;
+                
+            }
+        }
+
+        &__form-header {
+            position: absolute;
+            top: -20px;
+        }
+
+        
+    }
+}
