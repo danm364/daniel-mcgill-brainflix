@@ -18,7 +18,8 @@ function Body() {
         <section className="hero__container">
           <VideoPlayer />
         </section>
-        <Content  
+        <section>
+          <Content  
                 videoTitle = {videoTitle} 
                 videoDesc={videoDesc} 
                 videoLikes={videoLikes} 
@@ -30,6 +31,9 @@ function Body() {
         />
         
         <CommentFeed numberOfComments = {numberOfComments} videoDetails = {videoDetails}/>
+
+        </section>
+        
       </div>
     );
   }

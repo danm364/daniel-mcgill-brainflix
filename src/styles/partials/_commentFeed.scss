@@ -2,7 +2,63 @@
 .--smartphone-none {
     display: none;
 }
+
+.user-comment {
+
+
+    &__anchor {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__container {
+        width: 100%;
+        padding-top: 20px;
+        display: flex;
+        flex-direction: row;
+        align-self: flex-end;
+        border-top: 1px solid $divider-line;
+        
+        
+    }
+
+    &__headers {
+        &-wrap {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            
+        }
+
+        &-anchor {
+            position: relative;
+        }
+    }
+
+    &__user-img {
+        width:min-content;
+        border-radius: 50px;
+        width: 40px;
+        height: 40px;
+        
+        align-self: stretch;
+        
+    }
+
+}
 .comment {
+
+    &__headers {
+        &-wrap {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &-anchor {
+            position: relative;
+        }
+    }
 
     &__svg {
         position: absolute;
@@ -62,6 +118,7 @@
         margin: 0 auto;
         display: flex;
         flex-direction: column;
+        row-gap: 20px;
     }
 
     &__form {
@@ -83,6 +140,12 @@
 
 @media (min-width: 768px) {
 
+    .user-comment {
+        &__container {
+            width: 100%;
+        }
+    }
+
     .--smartphone-none {
         display: block;
     }
@@ -90,6 +153,8 @@
         display: none;
     }
     .comment {
+
+        
 
         &__form-container {
             width: 100%;
@@ -118,9 +183,15 @@
             }
         }
 
-        &__form-header {
-            position: absolute;
-            top: -20px;
+        &__form {
+            &-header {
+                position: absolute;
+                top: -20px;
+            }
+
+            &-container {
+                margin: 20px 0;
+            }
         }
 
         
