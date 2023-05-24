@@ -9,11 +9,14 @@
     & * {
         width: 55%;
     }
-    
 
     
 }
 
+.main__wrap {
+    display: flex;
+    flex-direction: column;
+}
 .hero {
     &__container {
         display: flex;
@@ -129,9 +132,20 @@
 }
 
 @media (min-width: 1250px) {
+    .main__wrap {
+        display: flex;
+        flex-direction: row;
+    }
     .video {
         &__timer-digits {
             font-size: 17px;
         }
+    }
+    .--tablet{
+        width: 70%;
+        border-right: 1px solid $divider-line;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
     }
 }

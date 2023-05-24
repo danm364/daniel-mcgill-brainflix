@@ -85,3 +85,16 @@
         }
     }
 }
+
+@media (min-width:1268px) {
+    .content {
+        &__container {
+            
+            margin: 0;
+        }
+
+        &__video-info {
+            padding-right: 2.5%;
+        }
+    }
+}

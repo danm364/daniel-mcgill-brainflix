@@ -191,7 +191,8 @@
                 column-gap: 20px;
             }
             &-right {
-                width: 30%;
+                width: 37.5%;
+                padding-right: 2.5%;
                 
             }
         }
@@ -206,4 +207,23 @@
 
         
     }
+}
+
+@media (min-width:1268px) {
+
+    .comment {
+        &__container {
+            margin: 0;
+        }
+
+        &__date {
+            padding-right: 2.5%;
+        }
+
+        &__user-comment {
+            padding-right: 2.5%;
+        }
+    }
+
+    
 }

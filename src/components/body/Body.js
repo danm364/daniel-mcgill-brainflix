@@ -2,6 +2,7 @@ import VideoPlayer from "./VideoPlayer";
 import Content from "./content/Content";
 import CommentFeed from "./comment/CommentFeed" ;
 import videoDetails from "../../data/video-details.json";
+import VideoFeed from "../videos/VideoFeed";
 
 function Body() {
   
@@ -12,26 +13,30 @@ function Body() {
     const videoChannel = videoDetails[0].channel
     const videoDate = new Date(videoDetails[0].timestamp).toLocaleDateString()
     const numberOfComments = videoDetails[0].comments.length
+    
 
     return (
       <div>
         <section className="hero__container">
           <VideoPlayer />
         </section>
-        <section>
-          <Content  
-                videoTitle = {videoTitle} 
-                videoDesc={videoDesc} 
-                videoLikes={videoLikes} 
-                videoViews={videoViews} 
-                videoChannel={videoChannel}
-                videoDate={videoDate}
-                
-        
-        />
-        
-        <CommentFeed numberOfComments = {numberOfComments} videoDetails = {videoDetails}/>
-
+        <section className="main__wrap">
+          <div className="--tablet">
+            <Content  
+                  videoTitle = {videoTitle} 
+                  videoDesc={videoDesc} 
+                  videoLikes={videoLikes} 
+                  videoViews={videoViews} 
+                  videoChannel={videoChannel}
+                  videoDate={videoDate}
+                  
+          
+            />
+          
+          
+            <CommentFeed numberOfComments = {numberOfComments} videoDetails = {videoDetails}/>
+          </div>
+          <VideoFeed videoDetails={videoDetails}/>
         </section>
         
       </div>

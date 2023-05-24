@@ -1,24 +1,27 @@
-import userImg from "../../../assets/images/Mohan-muruge.jpg"
-import commentSvg from "../../../assets/images/icons/publish.svg"
-import Comment from "./Comment"
+import Video from "./Video";
 
 
-function CommentFeed(props) {
-
-    console.log(props.videoDetails[0].comments)
+function VideoFeed(props) {
+        const title = props.videoDetails[0].title
+        console.log(props.videoDetails)
+    
     
     return (
-        <section>
-            <div>
-                <img src="" alt="" />
-                <div>
-                    <p></p>
-                    <p></p>
-                </div>
-            </div>
+        <section className="video-feed__container">
+            <h2>NEXT VIDEOS</h2>     
+            {props.videoDetails.map((element) => 
+                <Video 
+                    id={element.id}
+                    title={element.title}
+                    channel = {element.channel}
+                    videoImg = {element.image}
+                />
+            )}     
+            
+
         </section>
         
     );
   }
   
-  export default CommentFeed;
+  export default VideoFeed;

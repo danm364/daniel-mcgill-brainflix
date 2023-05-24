@@ -6,7 +6,7 @@ function Comment(props) {
     
     return (
 
-            <div className="user-comment__container ">
+            <div className="user-comment__container " key={props.id}>
                 <div>
                     <img src={userImg} alt="" className="user-comment__user-img"/>
                 </div>

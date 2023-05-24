@@ -1,0 +1,60 @@
+@use "../../styles/partials/variables" as *;
+
+
+.video-feed {
+
+    &__info-wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content:space-between;
+        padding: 3px 0;
+
+        & * {
+            margin: 0;
+        }
+    }
+    &__img {
+        background-color: $divider-line;
+        border-radius: 6px;
+        width: 140px;
+        
+    }
+
+    &__container {
+        row-gap: 20px;
+        display: flex;
+        flex-direction: column;
+
+        & h2 {
+            width: 90%;
+            margin: 0 auto;
+        }
+    }
+
+    &__video-wrap {
+        width: 90%;
+        height: 80px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        row-gap: 20px;
+    }
+}
+
+
+@media (min-width:1268px) {
+
+    .video-feed {
+        &__container {
+            width: 40%;
+            align-items: flex-start;
+        }
+        &__video-wrap {
+            margin: 0;
+            width: 60%;
+            margin-left: 4%;
+        }
+    }
+    
+    
+}

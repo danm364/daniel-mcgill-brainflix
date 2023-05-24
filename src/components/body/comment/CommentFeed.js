@@ -30,6 +30,7 @@ function CommentFeed(props) {
             </form>
             {props.videoDetails[0].comments.map ((comment) => 
                 <Comment 
+                    id={comment.id}
                     name = {comment.name}
                     comment = {comment.comment}
                     likes = {comment.likes}
