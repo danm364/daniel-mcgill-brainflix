@@ -12,21 +12,21 @@ function CommentFeed(props) {
         <section className="comment__container">
             
             <h2 className="comment__header">{props.numberOfComments} Comments</h2>
-            
+            <label htmlFor="" className="comment__form-header --none">JOIN THE CONVERSATION</label>
             <form className="comment__form-container ">
-                <label htmlFor="" className="comment__form-header --none">JOIN THE CONVERSATION</label>
+                
+                <img src={userImg} alt="" className="comment__user-img"/>
                 <div className="comment__anchor-left ">
-                    <img src={userImg} alt="" className="comment__user-img"/>
-                    <div className="comment__anchor-left">
-                        <label htmlFor="" className="comment__form-header --smartphone-none" >JOIN THE CONVERSATION</label>
-                        <textarea type="text" className="comment__input-area" placeholder="Add a new comment">
-                        </textarea>
-                    </div>   
-                </div>
-                <div className="comment__anchor-right">
-                    <button type="submit" className="comment__btn" >COMMENT</button>
-                    <object data={commentSvg} type="" className="comment__svg"></object>
-                </div>
+                    
+                    <label htmlFor="" className="comment__form-header" >JOIN THE CONVERSATION</label>
+                    <textarea type="text" className="comment__input-area" placeholder="Add a new comment">
+                    </textarea>
+                    <div className="comment__anchor-right">
+                        <button type="submit" className="comment__btn" >COMMENT</button>
+                        <object data={commentSvg} type="" className="comment__svg"></object>
+                    </div>
+                </div>   
+                
             </form>
             {props.videoDetails[0].comments.map ((comment) => 
                 <Comment 
