@@ -3,9 +3,10 @@
 
 .content {
 
-    // &__header {
-        
-    // }
+    &__header {
+        font-family: avenir-bold;
+        font-size: clamp(1.75rem, 4vw, 3.3rem );
+    }
 
     &--absolute {
         position: absolute;

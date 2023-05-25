@@ -3,11 +3,17 @@
 
 .video-feed {
 
+    &__title {
+        font-family: avenir-bold;
+    }
+
     &__info-wrap {
         display: flex;
         flex-direction: column;
         justify-content:space-between;
         padding: 3px 0;
+
+        
 
         & * {
             margin: 0;
@@ -28,6 +34,8 @@
         & h2 {
             width: 90%;
             margin: 0 auto;
+            color:$secondary-text;
+            font-size: 1rem;
         }
     }
 
@@ -38,6 +46,7 @@
         display: flex;
         flex-direction: row;
         row-gap: 20px;
+        column-gap: 20px;
     }
 }
 
@@ -48,6 +57,12 @@
         &__container {
             width: 40%;
             align-items: flex-start;
+
+            & h2 {
+                margin-left: 4%;
+                margin-top: 19.92px;
+                
+            }
         }
         &__video-wrap {
             margin: 0;

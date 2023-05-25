@@ -1,5 +1,5 @@
 import userImg from "../../../assets/images/Mohan-muruge.jpg"
-import commentSvg from "../../../assets/images/icons/publish.svg"
+import commentSvg from "../../../assets/images/icons/add_comment.svg"
 import Comment from "./Comment"
 
 

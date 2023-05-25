@@ -8,8 +8,8 @@ function Comment(props) {
 
             <div className="user-comment__container " key={props.id}>
                 <div>
-                    <img src={userImg} alt="" className="user-comment__user-img"/>
-                </div>
+                    <img src='' alt="" className="user-comment__user-img"/>
+                </div> 
                 <div className="user-comment__headers-wrap ">
                     <div className="user-comment__anchor">
                         <label htmlFor="" className="user-comment__fullname">{props.name}</label>
