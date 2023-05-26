@@ -11,22 +11,22 @@ function Content(props) {
 
     return (
       <div className="content__container">
-        <h1 className="content__header">{props.videoTitle}</h1>
+        <h1 className="content__header">{props.currentVideo.title}</h1>
         <div className="content__video-info">
           <div className="content__column--wrap flex-left">
-            <div className="content__author">By {props.videoChannel}</div>
-            <div className="content__date">{props.videoDate}</div>
+            <div className="content__author">By {props.currentVideo.channel}</div>
+            <div className="content__date">{new Date(props.currentVideo.timestamp).toLocaleDateString()}</div>
           </div>
           <div className="content__column--wrap flex-right">
-            <div className="content__video-views">{props.videoViews}
+            <div className="content__video-views">{props.currentVideo.views}
               <object data={viewsSvg} type="" className="content--absolute" aria-label="Views"></object>
             </div>
-            <div className="content__video-likes">{props.videoLikes}
+            <div className="content__video-likes">{props.currentVideo.likes}
               <object data={likesSvg} type="" className="content--absolute " aria-label="Likes"></object>
             </div>
           </div>
         </div>
-        <p className="content__video-desc">{props.videoDesc}</p>
+        <p className="content__video-desc">{props.currentVideo.description}</p>
 
       </div>
 

@@ -3,40 +3,51 @@ import Content from "./content/Content";
 import CommentFeed from "./comment/CommentFeed" ;
 import videoDetails from "../../data/video-details.json";
 import VideoFeed from "../videos/VideoFeed";
+import { useState } from "react";
 
 function Body() {
   
-    const videoTitle = videoDetails[0].title
-    const videoDesc = videoDetails[0].description
-    const videoLikes = videoDetails[0].likes
-    const videoViews = videoDetails[0].views
-    const videoChannel = videoDetails[0].channel
-    const videoDate = new Date(videoDetails[0].timestamp).toLocaleDateString()
+    
     const numberOfComments = videoDetails[0].comments.length
+
+    
+
+    
+    const [currentVideo, setVideo] = useState(videoDetails[0])
     
 
     return (
       <div>
         <section className="hero__container">
-          <VideoPlayer />
+          <VideoPlayer
+            currentVideo = {currentVideo}
+            setVideo = {setVideo}
+          
+          />
         </section>
         <section className="main__wrap">
           <div className="--tablet">
             <Content  
-                  videoTitle = {videoTitle} 
-                  videoDesc={videoDesc} 
-                  videoLikes={videoLikes} 
-                  videoViews={videoViews} 
-                  videoChannel={videoChannel}
-                  videoDate={videoDate}
+                  currentVideo = {currentVideo}
                   
           
             />
           
           
-            <CommentFeed numberOfComments = {numberOfComments} videoDetails = {videoDetails}/>
+            <CommentFeed 
+
+              numberOfComments = {numberOfComments} 
+              videoDetails = {videoDetails}
+              currentVideo = {currentVideo}
+              
+              
+            />
           </div>
-          <VideoFeed videoDetails={videoDetails}/>
+          <VideoFeed 
+            videoDetails={videoDetails}
+            currentVideo = {currentVideo}
+            setVideo = {setVideo}
+          />
         </section>
         
       </div>

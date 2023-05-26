@@ -5,13 +5,13 @@ import Comment from "./Comment"
 
 function CommentFeed(props) {
 
-    console.log(props.videoDetails[0].comments)
+    
     
     return (
         
         <section className="comment__container">
             
-            <h2 className="comment__header">{props.numberOfComments} Comments</h2>
+            <h2 className="comment__header">{props.currentVideo.comments.length} Comments</h2>
             <label htmlFor="" className="comment__form-header --none">JOIN THE CONVERSATION</label>
             <form className="comment__form-container ">
                 
@@ -28,7 +28,7 @@ function CommentFeed(props) {
                 </div>   
                 
             </form>
-            {props.videoDetails[0].comments.map ((comment) => 
+            {props.currentVideo.comments.map ((comment) => 
                 <Comment 
                     id={comment.id}
                     name = {comment.name}
