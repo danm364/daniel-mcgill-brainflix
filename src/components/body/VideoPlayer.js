@@ -1,16 +1,30 @@
-import videos from "../../data/videos.json";
 
 
-function VideoPlayer() {
+import playBtn from "../../assets/images/icons/play.svg";
 
-    console.log(videos[0].image)
+import PlayBtn from "./PlayBtn";
+import VideoTimeBar from "./VideoTimeBar";
+import Options from "./Options";
 
-    let bmxVideo = videos[0].image
+function VideoPlayer(props) {
+
+    
+    
+
+    
     return (
-      <video className="video__container">
+      <div className="video__wrap">
+        <video className="video__container" poster={props.currentVideo.image}>
+        </video>
+        <div className="video__controls">
+          <PlayBtn />
+          <VideoTimeBar />
+          < Options />
+        </div>
         
-        <source src={bmxVideo} type="video/jpg" alt="video-image" className="video__carousel"/>
-      </video>
+      </div>
+        
+      
     );
   }
   

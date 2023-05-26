@@ -1,0 +1,243 @@
+@use "../partials/variables" as *;
+.--smartphone-none {
+    display: none;
+}
+
+.user-comment {
+
+    &__fullname {
+        font-family: avenir-bold;
+    }
+    &__anchor {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__container {
+        width: 100%;
+        padding-top: 20px;
+        display: flex;
+        flex-direction: row;
+        align-self: flex-end;
+        border-top: 1px solid $divider-line;
+        column-gap: 20px;
+        
+        
+    }
+
+    &__headers {
+        &-wrap {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            width: 100%;
+            
+        }
+
+        &-anchor {
+            position: relative;
+        }
+    }
+
+    &__user-img {
+        width:min-content;
+        border-radius: 50px;
+        width: 40px;
+        height: 40px;
+        background-color: $secondary-text;
+        
+        align-self: stretch;
+        
+    }
+
+}
+.comment {
+
+    &__date {
+        color: $secondary-text;
+    }
+
+    &__headers {
+        &-wrap {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &-anchor {
+            position: relative;
+        }
+    }
+
+    &__svg {
+        position: absolute;
+        top: 9px;
+        left: 10px;
+    }
+
+    &__btn {
+        height: 40px;
+        width: 100%;
+        background-color: $primary-cta;
+        color: $form-field;
+        border: transparent;
+        border-radius: 5px;
+        &:hover {
+            background-color: $hover-color;
+        }
+    }
+
+    &__input-area {
+        height: 100px;
+        
+        border: 1px solid $divider-line;
+        background-color: $form-field;
+        border-radius: 5px;
+        padding: 10px 0 0 10px;
+        font-size: 1rem;
+        &::placeholder {
+            color: black;
+        } 
+        &:focus {
+            outline: blue;
+            border: 2px solid $primary-cta;
+        }
+    }
+
+    &__user-img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50px;
+        
+    }
+
+    &__anchor {
+        
+        &-left {
+            position: relative;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+
+            row-gap: 20px;
+        }
+
+        &-right {
+            position: relative;
+            width: 100%;
+            display: flex;
+
+        }
+    }
+
+    &__container {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    &__form {
+        &-container {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            align-self: flex-end;
+            row-gap: 10px;
+            column-gap: 20px;
+        }
+
+        &-header {
+            color: $secondary-text;
+
+            position: absolute;
+            top: -20px;
+
+        }
+    }
+    
+
+}
+
+@media (min-width: 768px) {
+
+    .user-comment {
+        &__container {
+            width: 100%;
+        }
+    }
+
+    .--smartphone-none {
+        display: block;
+    }
+    .--none {
+        display: none;
+    }
+    .comment {
+
+        &__anchor-left {
+            flex-direction: row;
+        }
+
+        
+
+        &__form-container {
+            width: 100%;
+            flex-direction: row;
+            column-gap: 20px;
+            
+            
+        }
+
+        &__input-area {
+            height: 28px;
+            width: 60%;
+            
+        }
+        &__user-img {
+            position: static;
+        }
+
+        &__anchor {
+            &-left {
+                width: 100%;
+                column-gap: 20px;
+            }
+            &-right {
+                width: 37.5%;
+                padding-right: 2.5%;
+                
+            }
+        }
+
+        &__form {
+            
+
+            &-container {
+                margin: 20px 0;
+            }
+        }
+
+        
+    }
+}
+
+@media (min-width:1268px) {
+
+    .comment {
+        &__container {
+            margin: 0;
+        }
+
+        &__date {
+            padding-right: 2.5%;
+        }
+
+        &__user-comment {
+            padding-right: 2.5%;
+        }
+    }
+
+    
+}

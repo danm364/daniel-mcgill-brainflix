@@ -6,8 +6,11 @@ function UploadBtn() {
     return (
 
         <div className="header__upload-wrap">
-            <button className='header__upload-btn'>UPLOAD</button>
-            <object data={uploadSvg} className='header__uploadSvg' aria-label="upload Svg"></object>
+            
+            <div className='header__uploadbtn-wrap'>
+                <button className='header__upload-btn'>UPLOAD</button>
+                <object data={uploadSvg} className='header__uploadSvg' aria-label="upload Svg"></object>
+            </div>
             <img src={userImg} alt="" className='header__upload-userImg'/>
         </div>
 
