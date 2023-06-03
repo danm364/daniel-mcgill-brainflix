@@ -3,11 +3,13 @@
 @use "./styles/partials/content" as *;
 @use "./styles/partials/commentFeed" as *;
 @use "./styles/partials/videoFeed" as *;
+@use "./styles/partials/uploadpage" as *;
 .App {
     
     background-color: white;
     height: 100vh;
     display: flex;
+    align-items: center;
     flex-direction: column;
     row-gap: 20px;
     font-family: avenir;

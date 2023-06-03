@@ -1,0 +1,60 @@
+@use "./variables" as *;
+
+.uploadpage {
+    &__container {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        row-gap: 20px;
+        
+    }
+
+    &__publishSvg {
+        
+        position: absolute;
+        top: 13px;
+        left: 5px;
+    }
+
+    &__btn-container {
+        display: flex;
+        position:relative;
+        
+        
+    }
+
+    &__publish-btn {
+        @include blue-btn;
+        
+    }
+
+    &__video-info {
+        row-gap: 20px;
+        display: flex;
+        flex-direction: column;
+        & * label {
+            color: $secondary-text;
+        }
+    }
+
+    &__info-container {
+
+        display: flex;
+        flex-direction: column;
+
+     input {
+        @include inputbox-mobile(10px)
+    }
+
+}
+}
+
+
+
+@media (min-width: 768px) {
+    .uploadpage {
+        &__publish-btn {
+            max-width: 257px;
+        }
+    }
+}
