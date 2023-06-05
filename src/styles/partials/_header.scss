@@ -49,6 +49,11 @@
         border: $divider-line 2px solid;
         border-radius: 5px;
         padding: 7px 0 7px 35px;
+
+        &:focus {
+            outline: $primary-cta;
+            border: 2px solid $primary-cta;
+        }
         
         
         
