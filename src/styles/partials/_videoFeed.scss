@@ -39,6 +39,11 @@
         }
     }
 
+    &__anchor-wrap {
+        
+        display: flex;
+    }
+
     &__video-wrap {
         width: 90%;
         height: 80px;

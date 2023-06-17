@@ -26,3 +26,32 @@ $videobar-color: rgba($color: #000000, $alpha: 0.3);
     font-style: normal;
 
 }
+
+
+@mixin inputbox-mobile($padding-left) {
+
+    height: 35px;
+    flex-grow: 3;
+    padding-left: 30px;
+    display: flex;
+    background-color: $form-field;
+    border: $divider-line 2px solid;
+    border-radius: 5px;
+    padding: 7px 0 7px $padding-left;
+
+}
+
+@mixin blue-btn {
+    background-color: $primary-cta;
+    color: $background-color;
+    border: transparent;
+    border-radius: 5px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+   
+    height: 53px;
+    
+}
+
