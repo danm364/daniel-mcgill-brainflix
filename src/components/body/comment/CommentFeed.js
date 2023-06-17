@@ -11,7 +11,7 @@ function CommentFeed(props) {
         
         <section className="comment__container">
             
-            <h2 className="comment__header">{props.currentVideo.comments.length} Comments</h2>
+            <h2 className="comment__header">{props.currentVideo.comments ? props.currentVideo.comments.length : "Not Available"} Comments</h2>
             <label htmlFor="" className="comment__form-header --none">JOIN THE CONVERSATION</label>
             <form className="comment__form-container ">
                 
@@ -28,7 +28,7 @@ function CommentFeed(props) {
                 </div>   
                 
             </form>
-            {props.currentVideo.comments.map ((comment) => 
+            {props.currentVideo.comments ? props.currentVideo.comments.map ((comment) => 
                 <Comment 
                     id={comment.id}
                     name = {comment.name}
@@ -36,7 +36,7 @@ function CommentFeed(props) {
                     likes = {comment.likes}
                     date = {new Date(comment.timestamp).toLocaleDateString()}
                 />
-            )}
+            ) : "Not available"}
 
         </section>
         

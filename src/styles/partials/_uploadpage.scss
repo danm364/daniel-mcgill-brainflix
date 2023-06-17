@@ -4,6 +4,18 @@
 
     &__anchor {
         display: flex;
+       
+        position: relative;
+    }
+
+    &__link {
+        @include blue-btn;
+        text-decoration: none;
+        
+    }
+
+    &__wrap {
+        display: flex;
         flex-direction: column;
         position: relative;
     }
@@ -127,16 +139,36 @@
 
 @media (min-width: 768px) {
     .uploadpage {
-        &__publish-btn {
+
+        &__link {
             max-width: 257px;
+           
         }
+
+        &__anchor {
+            max-width: 257px;
+            width: 100%;
+            order: 3;
+        }
+        
 
         &__video-info {
             border-top: 2px solid $divider-line;
         }
 
+        &__cancel-btn {
+            
+            max-width: 257px;
+        }
+
         &__btn-container {
            border-top: 2px solid $divider-line;
+        }
+
+        &__wrap {
+            flex-direction: row;
+            justify-content: flex-end;
+
         }
     }
 }

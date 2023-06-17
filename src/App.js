@@ -1,20 +1,35 @@
 import Header from "./components/header/Header";
-import Body from "./components/body/Body";
+import HomePage from "./pages/HomePage";
 import UploadPage from "./pages/UploadPage";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import { BrowserRouter, Routes, Route, useParams } from "react-router-dom";
 import './App.scss';
+import { useEffect } from "react";
 
 
 function App() {
+
+  let id = useParams()
+  console.log(id)
+
+  useEffect(() => {
+    console.log('hello')
+    
+  }, [])
+  
+ 
   return (
     <BrowserRouter>
       <div className="App">
           <Header />
-          
           <Routes>
-            <Route path="/" element={<Body />}/>
+            <Route path="/" element={<HomePage />}/>
+            <Route path="/videos" element={<HomePage />}/>
+            <Route path="/videos/:id" element={<HomePage  />}></Route>
             <Route path="/upload" element={<UploadPage/>}></Route>
+            
           </Routes>
+          
       </div>
       
     </BrowserRouter>

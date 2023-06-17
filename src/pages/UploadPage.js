@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import publishSvg from "../assets/images/icons/publish.svg"; 
 import bikeImage from "../assets/images/Upload-video-preview.jpg";
 
@@ -25,10 +26,15 @@ function UploadPage() {
                 </div>
             </section>
             <div className="uploadpage__btn-container">
-                <div className="uploadpage__anchor ">
-                    <button className="uploadpage__publish-btn">PUBLISH</button>
-                    <object data={publishSvg} aria-label="publishSvg" className="uploadpage__publishSvg" type=""></object>
+                <div className="uploadpage__wrap ">
+                    <div className="uploadpage__anchor">
+                        <Link className="uploadpage__link" to="/">
+                            <button className="uploadpage__publish-btn">PUBLISH</button>
+                        </Link>
+                        <object data={publishSvg} aria-label="publishSvg" className="uploadpage__publishSvg" type=""></object>
+                    </div>
                     <button className="uploadpage__cancel-btn">CANCEL</button>
+                    
                 </div>
             </div>
             
