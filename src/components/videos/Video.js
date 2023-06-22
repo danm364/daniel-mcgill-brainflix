@@ -12,8 +12,9 @@ function Video(props) {
     
     useEffect(() => {
         if (params.id) {
-        axios.get(`https://project-2-api.herokuapp.com/videos/${params.id}?api_key=${API_KEY}`).then((res) => {
+        axios.get(`http://localhost:3500/videos/${params.id}`).then((res) => {
             props.setVideo(res.data)
+           
 
         }) }
     },[params.id])

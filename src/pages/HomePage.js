@@ -12,15 +12,16 @@ function HomePage() {
   
  
     const API_KEY = process.env.REACT_APP_API_KEY
-    const GET_REQUEST = `https://project-2-api.herokuapp.com/videos/84e96018-4022-434e-80bf-000ce4cd12b8?api_key=${API_KEY}`
+    const GET_REQUEST = `http://localhost:3500/videos`
     
     const params = useParams()
+    
   
     const [currentVideo, setVideo] = useState({})
     useEffect(() => {
       axios.get(GET_REQUEST).then((res) => {
-
-        setVideo(res.data)
+        
+        setVideo(res.data[0])
 
       })
 

@@ -7,11 +7,11 @@ function VideoFeed(props) {
     const [videoDetails, setVideoDetails] = useState([{}])
     
     useEffect(() => {
-        axios.get(`https://project-2-api.herokuapp.com/videos?api_key=${process.env.REACT_APP_API_KEY}`).then((res) => {
+        axios.get(`http://localhost:3500/videos`).then((res) => {
             setVideoDetails(res.data)
         })
     }, [])
-
+    console.log(videoDetails)
     return (
         <section className="video-feed__container">
             <h2>NEXT VIDEOS</h2>     

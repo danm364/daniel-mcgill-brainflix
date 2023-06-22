@@ -89,7 +89,7 @@
 
     &__input-area {
         height: 100px;
-        
+        resize: none;
         border: 1px solid $divider-line;
         background-color: $form-field;
         border-radius: 5px;
