@@ -9,13 +9,6 @@ import { useEffect } from "react";
 
 function App() {
 
-  let id = useParams()
-  console.log(id)
-
-  useEffect(() => {
-    console.log('hello')
-    
-  }, [])
   
  
   return (

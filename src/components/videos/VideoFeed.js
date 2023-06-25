@@ -11,7 +11,7 @@ function VideoFeed(props) {
             setVideoDetails(res.data)
         })
     }, [])
-    console.log(videoDetails)
+    
     return (
         <section className="video-feed__container">
             <h2>NEXT VIDEOS</h2>     
