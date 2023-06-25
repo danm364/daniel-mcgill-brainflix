@@ -14,7 +14,7 @@ function VideoPlayer(props) {
     
     return (
       <div className="video__wrap">
-        <video className="video__container" poster={props.currentVideo.image}>
+        <video className="video__container" poster={props.currentVideo.image ? props.currentVideo.image : "Not available"}>
         </video>
         <div className="video__controls">
           <PlayBtn />
